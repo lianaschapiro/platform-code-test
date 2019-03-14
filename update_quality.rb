@@ -9,6 +9,11 @@ def update_quality(awards)
         if award.quality > 0
           award.quality -= 1
         end
+        if award.name == 'Blue Star'
+          if award.quality > 0
+            award.quality -= 1
+          end
+        end
       else
         # Blue First and Blue Compare increase in quality
         if award.quality < 50
@@ -34,6 +39,11 @@ def update_quality(awards)
             if award.quality > 0
               # after expiration, awards decrease yet another point (except Blue First and Blue Compare)
               award.quality -= 1
+            end
+            if award.name == 'Blue Star'
+              if award.quality > 0
+                award.quality -= 1
+              end
             end
           # Blue Compare quality drops to 0 after expiration
           else
