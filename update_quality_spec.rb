@@ -218,7 +218,7 @@ describe '#update_quality' do
     let(:awards) {
       [
         Award.new('NORMAL ITEM', 5, 10),
-        Award.new('Blue First', 3, 10),
+        Award.new('Blue First', 3, 10)
       ]
     }
 
